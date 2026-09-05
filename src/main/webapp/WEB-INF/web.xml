@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID"
+         version="4.0">
+
+    <display-name>SSRF Vulnerable App</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Backend endpoint -->
+    <servlet>
+        <servlet-name>VulnerablePortController</servlet-name>
+        <servlet-class>edu.deakin.sit738.ssrf.VulnerablePortController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VulnerablePortController</servlet-name>
+        <url-pattern>/vulnerable-port</url-pattern>
+    </servlet-mapping>
+
+    <!-- Frontend page controller -->
+    <servlet>
+        <servlet-name>SSRFPageController</servlet-name>
+        <servlet-class>edu.deakin.sit738.ssrf.SSRFPageController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SSRFPageController</servlet-name>
+        <url-pattern>/ssrf</url-pattern>
+    </servlet-mapping>
+
+</web-app>

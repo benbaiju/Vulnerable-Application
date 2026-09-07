@@ -12,7 +12,6 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!-- Backend endpoint -->
     <servlet>
         <servlet-name>VulnerablePortController</servlet-name>
         <servlet-class>edu.deakin.sit738.ssrf.VulnerablePortController</servlet-class>
@@ -23,7 +22,6 @@
         <url-pattern>/vulnerable-port</url-pattern>
     </servlet-mapping>
 
-    <!-- Frontend page controller -->
     <servlet>
         <servlet-name>SSRFPageController</servlet-name>
         <servlet-class>edu.deakin.sit738.ssrf.SSRFPageController</servlet-class>
@@ -33,5 +31,13 @@
         <servlet-name>SSRFPageController</servlet-name>
         <url-pattern>/ssrf</url-pattern>
     </servlet-mapping>
-
+	<servlet>
+	    <servlet-name>SSRFRequestController</servlet-name>
+	    <servlet-class>edu.deakin.sit738.ssrf.SSRFRequestController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>SSRFRequestController</servlet-name>
+	    <url-pattern>/fetch-url</url-pattern>
+	</servlet-mapping>
 </web-app>

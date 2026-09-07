@@ -1,0 +1,4 @@
+Internal application configuration
+Environment: development
+Service: FinSight internal backend
+Access: Internal only
